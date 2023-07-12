@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    # connessione al database in questo caso postgre
+    url: jdbc:postgresql://localhost:5432/spring3-stuff
+    username: andreaciambella
+    password: postgres123
+  jpa:
+    hibernate:
+      # metodo con qui genero le tabelle all'interno del db
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        # dialetto del database
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # mostra le query nel run del terminale
+        show_sql: true
+        # OSIVFilter
+    open-in-view: true

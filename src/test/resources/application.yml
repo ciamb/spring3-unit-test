@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    # connessione al database in questo caso h2 per i test -> h2 è un db in memoria
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    username: sa
+    password: sa
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      # metodo con qui genero le tabelle all'interno del db
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        # dialetto del database
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # mostra le query nel run del terminale
+        show_sql: true
+        # OSIVFilter
+    open-in-view: true
